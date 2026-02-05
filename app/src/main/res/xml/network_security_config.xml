@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Configuration for api.jikan.moe to handle SSL certificate issues in emulator -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">api.jikan.moe</domain>
+        <trust-anchors>
+            <!-- System certificates -->
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+
+    <!-- Default configuration for other domains -->
+    <trust-anchors>
+        <certificates src="system" />
+    </trust-anchors>
+</network-security-config>
